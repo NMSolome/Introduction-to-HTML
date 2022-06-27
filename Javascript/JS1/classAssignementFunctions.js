@@ -9,7 +9,3 @@ const compoundInterest = (principal, time, rate, n) => {
 };
 console.log(compoundInterest(principal, time, rate, n));
 
-
-function agecheck(age, ageRange){
-    
-}
