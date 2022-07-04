@@ -1,9 +1,19 @@
-.row {
-    border: dashed tomato;
-}
-.container, .container-fluid {
-    border: dotted black;
-}
 .col {
-    border: groove pink;
+    column-gap: 10px
+    padding-bottom: 0px;
 }
+
+p{
+    width="100px;
+}
+div {
+    padding: 0px;
+  }
+
+  table {
+    width: 100%;
+  }
+  
+  th {
+    height: 70px;
+  }
