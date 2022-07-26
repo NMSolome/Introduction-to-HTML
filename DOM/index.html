@@ -1,0 +1,51 @@
+<!-- id
+name
+tag name
+class name
+query selector -->
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <p id="para1">This is the first paragraph</p>
+        <small><span id="textMessage"> </span></small>
+    </div>
+    <div>
+        <p name="para2"> This is the name access Paragraph </p>
+    </div>
+    <div>
+        <label> This is the name access Paragraph </p>
+            <label> This is the name access Paragraph2 </p>
+                <label> This is the name access Paragraph3 </p>
+                    <label> This is the name access Paragraph4 </p>
+    </div>
+
+    <div>
+        <p class="para3"> Access element by class name</p>
+    </div>
+
+    <script>
+        document.getElementById("para1").style.color = "red";
+        document.getElementById("para1").style.border = "2px solid blue"
+        document.getElementById("para1").style.fontSize = "2rem"
+        document.getElementById("textMessage").innerHTML = "This is an error";
+        document.getElementsByName("para2")[0].style.color = "blue";
+        const labels = document.getElementsByTagName("label")
+        for (let i = 0; i < labels.length; i++) {
+            labels[i].style.color = "red"
+            labels[i].style.fontSize = "20px"
+        }
+        labels[2].style.color="Orange"
+        document.getElementsByClassName("para3")[0].style.color = "purple"
+    </script>
+</body>
+
+</html>

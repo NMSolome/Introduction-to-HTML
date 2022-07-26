@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <li>
+        <ul className="one"></ul>
+        <ul classNama="two"></ul>
+        <ul id="one"></ul>
+        <ul id="one"></ul>
+    </li>
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit modi optio aperiam.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit modi optio aperiam.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit modi optio aperiam.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit modi optio aperiam.</p>
+    </div>
+    <div>
+        <p class="class1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit modi optio aperiam.</p>
+        <p class="class1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit modi optio aperiam.</p>
+
+    </div>
+    <div>
+        <p id="id1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit modi optio aperiam.</p>
+        <p id="id2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit modi optio aperiam.</p>
+    </div>
+    <script>
+        // document.querySelector("p").style.color = "green"
+        // document.querySelector(".class1").style.color = "orange"
+        // document.querySelector("#id1").style.color = "blue"
+        const nodeList = document.querySelectorAll(".class1");
+        for (let i = 0; i < nodeList.length; i++) {
+            nodeList[i].style.backgroundColor = "red";
+        }
+
+    </script>
+
+</body>
+
+</html>

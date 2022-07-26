@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="demo">
+
+    </div>
+    <button onclick="document.getElementById('demo').innerHTML = Date()">The time is?</button>
+    <div id="demo1">
+        Javascript in HTML
+        <button onclick="bot()">click</button>
+    </div>
+<!-- Alerts: wrong name/ password -->
+<div id="demo2">
+<button onclick="alert('Welcome User')"> ALERT</button>
+</div>
+<div id="demo10">
+    <button id = "demo5" onclick="user()">Demo 5</button>
+    <button id = "demo6"onclick="user()">Demo 6</button>
+</div>
+    <script>
+        // function changeColor() {
+        //     document.getElementById("demo1").style.color = "red"
+        // }
+        function bot() {
+            document.getElementById("demo1").style.display = "none"
+        }
+        function user() {
+            if (this.id == "demo5"){
+                document.getElementById("demo5").style.backgroundColor = "wheat"
+            }
+            else {
+                document.getElementById("demo5").style.backgroundColor = "yellow"
+        }
+    }
+    </script>
+</body>
+
+</html>
+
+
+
+<!-- onclick dblclick mousedown mouseup mousemove keydown keyup touchmove touchstart touchend onload onfocus onblur onerror onscroll -->
