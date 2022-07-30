@@ -6,19 +6,22 @@ function validationForm() {
 
     // var strUser1 = e.options[e.selectedIndex].text;
     // let nameerr = document.forms["RegForm"] ["nameerr"];
+    nameRegex = /^[A-Za-z]+$/
+    emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+    passRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#^()])[A-Za-z\d@#$!%*?&^()]{10,}$/
 
-    if (username1.value == "") {
-        alert("Please enter your first name");
+    if (username1.value == "" || !nameRegex.test(username1.value)) {
+        alert("Please enter your first name. Use alphabet only");
         username1.style.border = "2px solid red";
-        username1.innerHTML = "Please enter your first name"
+        username1.innerHTML = "Please enter your first name. Use alphabet only "
         // username1.focus();
         return false;
     }
     else {
         username1.style.border = "2px solid green";
     }
-    if (username2.value == "") {
-        alert("Please enter your last name");
+    if (username2.value == ""  || !nameRegex.test(username2.value)) {
+        alert("Please enter your last name. Use alphabet only");
         username2.style.border = "2px solid red";
         username2.innerHTML = "Please enter your last name"
         // username2.focus();
@@ -27,7 +30,7 @@ function validationForm() {
     else {
         username2.style.border = "2px solid green";
     }
-    if (email.value == "") {
+    if (email.value == "" || !emailRegex.test(email.value)) {
         alert("Please enter your email");
         email.style.border = "2px solid red";
         email.innerHTML = "Please enter your email"
@@ -37,15 +40,15 @@ function validationForm() {
     if (email.value.indexOf("@", 0) < 0 || email.value.indexOf(".", 0) < 0) {
         // alert("Please enter a valid email address");
         email.style.border = "2px solid red";
-        email.innerHTML = "Please enter a valid email address"
+        email.innerHTML = "Please enter a valid email address ........@.... . ...."
         // email.focus();
         return false;
     }
     else {
         email.style.border = "2px solid green";
     }
-    if (pass.value == "" || pass.value.length != 10) {
-        alert("Please enter a valid password");
+    if (pass.value == "" || !passRegex.test(pass.value)) {
+        alert("Please enter a valid password. A valid password must contain an uppercase and lower case letters, a number and a special character");
         pass.style.border = "2px solid red";
         // phone.focus();
         return false;
@@ -80,13 +83,18 @@ if (
 ) {
     alert("Welldone")
 }else {
-    alert("Please make a choice");
+    alert("Relationship status??");
     check.focus()
     return false;
 }
-{
-    window.location.href="./wellDone.html";
-  }
+
+function validation(formid){
+    //perform your validations
+    if (valid)
+        $("#formid").submit();
+    else
+       alert("Validation error");
+    }
 
 }
 
